@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftNest</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fdfbf7;
+            color: #231f20;
+        }
+
+        header {
+            background: #963728;
+            color: white;
+            padding: 20px 35px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            color: #f4a261;
+        }
+
+        .layout {
+            display: flex;
+        }
+
+        aside {
+            position: sticky;
+            top: 85px;
+            height: 85vh;
+            width: 200px;
+            background: #b84a39;
+            padding: 30px 20px;
+        }
+
+        aside a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 5px;
+        }
+
+        aside a:hover {
+            color: #f4a261;
+        }
+
+        main {
+            flex: 1;
+            padding: 45px;
+        }
+
+        .intro {
+            background: #f6efe6;
+            padding: 45px;
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #d98a2b;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        .collection {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gift {
+            background: white;
+            padding: 20px;
+            width: 180px;
+            border-radius: 10px;
+            position: relative;
+            border: 1px solid #e8ddd0;
+        }
+
+        .gift img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .gift h3 {
+            margin-top: 12px;
+        }
+
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #963728;
+            color: white;
+            padding: 13px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            z-index: 20;
+        }
+
+        footer {
+            background: #963728;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 650px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            aside {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+
+            aside a {
+                display: inline-block;
+                padding: 10px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .intro h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>GiftNest.</h1>
+        <p>Curated Indian Gifting & Artisanal Hampers</p>
+    </header>
+
+    <div class="layout">
+
+        <aside>
+            <a href="#home">Home</a>
+            <a href="#gifts">Explore Hampers</a>
+            <a href="#wishlist">My Wishlist</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </aside>
+
+        <main>
+
+            <section class="intro" id="home">
+
+                <span class="badge">Festive Edit</span>
+
+                <h2>Thoughtful Gifts Wrapped in Warmth.</h2>
+
+                <p>
+                    Welcome to GiftNest! Discover handcrafted brass diyas,
+                    artisanal chai hampers, and personalized keepsakes curated
+                    for every special celebration across India.
+                </p>
+
+            </section>
+
+            <section id="gifts">
+
+                <h2>Curator's Picks</h2>
+
+                <br>
+
+                <div class="collection">
+
+                    <div class="gift">
+                        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=500&q=80"
+                             alt="Royal Utsav Hamper">
+                        <h3>Royal Utsav Box</h3>
+                        <p>Festive Hamper • ₹2,499</p>
+                    </div>
+
+                    <div class="gift">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=500&q=80"
+                             alt="Assam Chai Trunk">
+                        <h3>Assam Chai Trunk</h3>
+                        <p>Gourmet Tea • ₹1,499</p>
+                    </div>
+
+                    <div class="gift">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=500&q=80"
+                             alt="Ayurvedic Spa Box">
+                        <h3>Rose & Oud Spa</h3>
+                        <p>Wellness Gift • ₹1,850</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="wishlist">
+                <br><br>
+                <h2>My Wishlist</h2>
+                <p>Save your favourite hampers and personalized gift boxes for upcoming occasions.</p>
+            </section>
+
+            <section id="about">
+                <br><br>
+                <h2>About GiftNest</h2>
+                <p>Connecting Indian artisans with heartfelt, eco-conscious gifting experiences.</p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <a href="#home" class="fixed-button">↑ Back to Top</a>
+
+    <footer id="contact">
+        <p>GiftNest | Curate. Wrap. Celebrate.</p>
+        <p>© 2026 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
